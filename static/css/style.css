@@ -48,8 +48,11 @@ h2 {
     background-color: antiquewhite;
 }
 
+#instaEmbend {
+    display: flex;
+}
 
-
-#bodyLine{
+body hr{
     margin-bottom: 25px;
+    color: azure;
 }

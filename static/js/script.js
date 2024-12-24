@@ -10,12 +10,23 @@ document.addEventListener('DOMContentLoaded', () => {
                 <p><strong>Data:</strong> ${evento.data}</p>
                 <p><strong>Organização:</strong> ${evento.org}</p>
                 <p><strong>Descrição:</strong> ${evento.desc}</p>
-                <hr id="bodyLine">
-                `;
+                <p><strong>Cartaz:</strong></p>`;
+                
+                if (evento.insta) {
+                    const instaEmbed = document.createElement('blockquote');
+                    instaEmbed.className = 'instagram-media';
+                    instaEmbed.innerHTML = `<a href="${evento.insta}" target="_blank" id="instaEmbend">Veja o post no Instagram</a>`;
+                    eventoDiv.appendChild(instaEmbed);
+
+                    const hr = document.createElement('hr');
+                    eventoDiv.appendChild(hr);
+                }
+                
+
                 eventos.appendChild(eventoDiv);
             });
+            });
         })
-})
 .catch(error => console.error('Erro ao carregar eventos', error));
 
 // RAFFS DIAS
