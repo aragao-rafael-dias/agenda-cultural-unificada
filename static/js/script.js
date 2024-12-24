@@ -8,7 +8,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 eventoDiv.innerHTML = `
                 <p><strong>Nome:</strong> ${evento.nome}</p>
                 <p><strong>Data:</strong> ${evento.data}</p>
-                <p><strong>Organização:</strong> ${evento.org}</p><hr>
+                <p><strong>Organização:</strong> ${evento.org}</p>
+                <p><strong>Descrição:</strong> ${evento.desc}</p>
+                <hr id="bodyLine">
                 `;
                 eventos.appendChild(eventoDiv);
             });
